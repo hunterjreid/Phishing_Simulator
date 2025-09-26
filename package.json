@@ -1,15 +1,27 @@
 {
-  "name": "few",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "phishing-simulator",
+  "version": "0.1.0",
+  "description": "Preview-only phishing simulator for education and authorized training.",
+  "private": true,
+  "main": "phishing-sim.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preview": "node phishing-sim.js --authorized=true",
+    "preview:payroll": "node phishing-sim.js --authorized=true --scenario=payroll",
+    "preview:package": "node phishing-sim.js --authorized=true --scenario=package",
+    "ui": "powershell -ExecutionPolicy Bypass -NoLogo -NoProfile -File .\\scripts\\Open-UI.ps1"
   },
-  "keywords": [],
+  "keywords": [
+    "phishing",
+    "training",
+    "education",
+    "security"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "nodemailer": "^6.9.4"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

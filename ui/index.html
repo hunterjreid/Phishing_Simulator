@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phishing Simulator — Preview UI</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Phishing Simulator — Preview Only</h1>
+      <p class="subtitle">Generates a preview of an email. Does not send.</p>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <form id="preview-form" novalidate>
+          <div class="field">
+            <label for="recipient">Recipient email</label>
+            <input id="recipient" name="recipient" type="email" placeholder="name@example.com" required>
+            <small class="hint">Preview only. No emails are sent.</small>
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="Action required: Verify your account">
+          </div>
+
+          <div class="field">
+            <label for="body">Body</label>
+            <textarea id="body" name="body" rows="8" placeholder="Write the email body..."></textarea>
+            <small class="hint">Tip: Keep it realistic but ethical for training.</small>
+          </div>
+
+          <div class="actions">
+            <button id="generate" type="submit">Generate Preview</button>
+            <button id="fillDemo" type="button" class="secondary">Fill Demo Text</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card" id="output" hidden>
+        <div class="output-header">
+          <h2>Preview</h2>
+          <div class="output-actions">
+            <button id="copyPreview" class="secondary">Copy</button>
+          </div>
+        </div>
+        <pre id="previewText" class="preview"></pre>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>For education and authorized training only. No emails are sent.</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+  </html>
+
+
